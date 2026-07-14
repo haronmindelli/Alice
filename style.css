@@ -1,0 +1,370 @@
+/* ==========================
+   IMPORTAÇÃO DA FONTE
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap');
+
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#fff,#ffeaea);
+    color:#7a0000;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   FUNDO DECORATIVO
+========================== */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle,#ffbcbc 1px,transparent 1px);
+    background-size:40px 40px;
+    opacity:.25;
+    z-index:-1;
+}
+
+/* ==========================
+   PÁGINA INICIAL
+========================== */
+
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:70px;
+    color:#c4002f;
+    font-family:'Dancing Script',cursive;
+}
+
+header p{
+    margin-top:20px;
+    max-width:700px;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.botao{
+    margin-top:40px;
+    display:inline-block;
+    text-decoration:none;
+    background:#c4002f;
+    color:white;
+    padding:16px 35px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(196,0,47,.25);
+}
+
+.botao:hover{
+    background:#ff2b62;
+    transform:translateY(-5px);
+}
+
+/* ==========================
+   CORAÇÕES
+========================== */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.hearts span{
+    position:absolute;
+    color:#ff4d6d;
+    font-size:25px;
+    animation:subir 8s linear infinite;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:30%;animation-delay:2s;}
+.hearts span:nth-child(3){left:50%;animation-delay:4s;}
+.hearts span:nth-child(4){left:70%;animation-delay:1s;}
+.hearts span:nth-child(5){left:90%;animation-delay:3s;}
+
+@keyframes subir{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+
+}
+
+/* ==========================
+   TOPO DAS PÁGINAS
+========================== */
+
+.topo{
+    padding:70px 20px 30px;
+    text-align:center;
+}
+
+.topo h1{
+    font-size:55px;
+    color:#c4002f;
+    font-family:'Dancing Script',cursive;
+}
+
+.topo p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* ==========================
+   MOMENTOS
+========================== */
+
+.momentos{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding-bottom:70px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card h2{
+    margin:20px;
+    color:#c4002f;
+}
+
+.card p{
+    margin:0 20px 25px;
+    line-height:1.7;
+}
+
+.botoes{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:70px;
+    flex-wrap:wrap;
+}
+
+/* ==========================
+   DESCULPAS
+========================== */
+
+.desculpas{
+    width:90%;
+    max-width:900px;
+    margin:70px auto;
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.desculpas h1{
+    color:#c4002f;
+    font-size:60px;
+    font-family:'Dancing Script',cursive;
+    margin-bottom:35px;
+}
+
+.texto{
+    font-size:19px;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+.destaque{
+    color:#b1002a;
+    font-weight:bold;
+    font-size:22px;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:768px){
+
+header h1{
+font-size:48px;
+}
+
+.topo h1{
+font-size:42px;
+}
+
+.desculpas{
+padding:30px;
+}
+
+.desculpas h1{
+font-size:45px;
+}
+
+.texto{
+font-size:17px;
+}
+
+.card img{
+height:220px;
+}
+
+}
+
+/*=========================
+      PÁGINA FINAL
+=========================*/
+
+.final{
+    width:90%;
+    max-width:900px;
+    margin:70px auto;
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.final h1{
+    font-size:60px;
+    color:#c4002f;
+    font-family:'Dancing Script',cursive;
+    margin-bottom:25px;
+}
+
+.final p{
+    font-size:19px;
+    line-height:2;
+    margin:20px 0;
+}
+
+.frase{
+    font-size:24px;
+    color:#b1002a;
+    font-weight:bold;
+    font-style:italic;
+}
+
+.cora{
+    font-size:45px;
+    margin:30px 0;
+}
+
+.final h2{
+    color:#c4002f;
+    margin-top:20px;
+}
+
+.botoes-final{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.sim,
+.nao{
+    border:none;
+    cursor:pointer;
+    padding:16px 35px;
+    border-radius:50px;
+    color:white;
+    font-size:18px;
+    transition:.4s;
+}
+
+.sim{
+    background:#c4002f;
+}
+
+.nao{
+    background:#777;
+}
+
+.sim:hover,
+.nao:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+.mensagem-final{
+    display:none;
+    margin-top:50px;
+    animation:aparecer 1s;
+}
+
+.coracoes{
+    font-size:35px;
+    margin-top:25px;
+    animation:pulsar 1.5s infinite;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes pulsar{
+    50%{
+        transform:scale(1.1);
+    }
+}
